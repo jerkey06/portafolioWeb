@@ -1,0 +1,613 @@
+@keyframes openCard {
+   0% {
+       opacity: 0;
+       transform: translate(-50%,-50%) scale(.8)
+   }
+
+   to {
+       opacity: 1;
+       transform: translate(-50%,-50%) scale(1)
+   }
+}
+
+body,nav ul {
+   margin: 0;
+   padding: 0;
+   display: flex
+}
+
+html {
+   scroll-behavior: smooth
+}
+
+body {
+   flex-direction: column;
+   min-height: 100vh;
+   overflow-x: hidden;
+   font-family: "Roboto",sans-serif;
+   background: url(../assets/images/background.webp)center/cover fixed no-repeat;
+   color: #fff
+}
+
+main,main section {
+   display: flex;
+   flex-direction: column
+}
+
+main {
+   flex: 1
+}
+
+main section {
+   min-height: 100vh;
+   justify-content: center;
+   box-sizing: border-box;
+   margin-top: 100px;
+   margin-bottom: 100px;
+   padding: 40px
+}
+
+form,header {
+   background-color: rgba(0,0,0,.7)
+}
+
+form {
+   padding: 20px;
+   max-width: 500px;
+   margin: 0 auto
+}
+
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   padding: 20px 5%;
+   z-index: 1000
+}
+
+form,form input,form textarea,header,main,nav {
+   width: 100%
+}
+
+nav ul {
+   list-style-type: none
+}
+
+nav li {
+   margin-right: 20px
+}
+
+.project a,nav a {
+   text-decoration: none
+}
+
+nav a {
+   color: #ddd;
+   position: relative;
+   transition: color .3s ease
+}
+
+nav a::after {
+   content: "";
+   position: absolute;
+   bottom: -5px;
+   left: 0;
+   width: 100%;
+   height: 2px;
+   background-color: #ddd;
+   transform: scaleX(0);
+   transition: transform .3s ease
+}
+
+nav a.active::after,nav a:hover::after {
+   transform: scaleX(1)
+}
+
+.project {
+   border: 1px solid #ccc;
+   padding: 20px;
+   margin-bottom: 20px
+}
+
+.projects-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+   gap: 2rem
+}
+
+.project a {
+   display: inline-block;
+   margin-top: 10px;
+   background-color: #333;
+   color: #fff;
+   padding: 10px 20px
+}
+
+.form-container {
+   justify-content: flex-end
+}
+
+textarea {
+   resize: none
+}
+
+form label {
+   font-weight: 700;
+   margin-bottom: 5px
+}
+
+::-webkit-input-placeholder {
+   color: rgba(255,255,255,.7);
+   font-style: italic
+}
+
+:-ms-input-placeholder {
+   color: rgba(255,255,255,.7);
+   font-style: italic
+}
+
+::placeholder {
+   color: rgba(255,255,255,.7);
+   font-style: italic
+}
+
+form input:focus,form textarea:focus {
+   outline: 0;
+   border-bottom: 1px solid #fff
+}
+
+form textarea {
+   field-sizing: content
+}
+
+form button {
+   background-color: transparent;
+   color: #fff;
+   padding: 10px 20px;
+   border: 0;
+   cursor: pointer;
+   align-self: flex-start;
+   border-bottom: 1px solid #ccc
+}
+
+input:-webkit-autofill,input:-webkit-autofill:hover {
+   -webkit-text-fill-color: #fff
+}
+
+input:-webkit-autofill,input:-webkit-autofill:active,input:-webkit-autofill:focus,input:-webkit-autofill:hover {
+   -webkit-box-shadow: 0 0 0 30px transparent inset;
+   transition: background-color 5000s ease-in-out 0s
+}
+
+input:-webkit-autofill:active {
+   -webkit-text-fill-color: #fff
+}
+
+input:-webkit-autofill:focus {
+   -webkit-text-fill-color: #fff
+}
+
+footer {
+   width: 100vw;
+   margin: auto;
+   display: block;
+   padding: 20px 5%;
+   background-color: rgba(0,0,0,.7);
+   color: #fff;
+   text-align: center
+}
+
+:root {
+   --background: #ffffff;
+   --primary: #000;
+   --primary-light: rgb(1, 1, 1);
+   --secondary: #f5f5f5;
+   --secondary-background: rgba(27, 27, 27, 0.95);
+   --secondary-text: #4894cf;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box
+}
+
+.container {
+   max-width: 60rem;
+   width: 100%;
+   container-name: card-container;
+   container-type: inline-size
+}
+
+.card,.content {
+   display: flex;
+   flex-direction: column
+}
+
+.card {
+   border: 1px solid var(--secondary);
+   border-radius: .75rem;
+   background-color: var(--secondary-background);
+   overflow: hidden;
+   min-height: 24rem;
+   color: #fff;
+   margin-bottom: 2rem
+}
+
+.card:hover {
+   border: 1px solid #4895d0;
+   box-shadow: 0 24px 72px 0 rgba(0,0,0,.3)
+}
+
+.content {
+   gap: 1rem;
+   justify-content: start;
+   padding: 1rem
+}
+
+.background img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover
+}
+
+.card-type {
+   height: 2.25rem;
+   padding: .25rem .75rem;
+   display: flex;
+   white-space: nowrap;
+   align-items: center;
+   justify-content: center;
+   border-radius: .5rem;
+   gap: .5rem;
+   color: var(--secondary-text);
+   background-color: var(--secondary)
+}
+
+.card-header {
+   display: flex;
+   justify-content: space-between
+}
+
+.latest-article {
+   height: 2.25rem;
+   padding: .25rem .75rem;
+   border-radius: .5rem;
+   display: flex;
+   white-space: nowrap;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--primary-light);
+   color: var(--background)
+}
+
+.card-content {
+   display: flex;
+   flex-direction: column;
+   gap: .5rem
+}
+
+.card-content>h2 {
+   font-weight: 700
+}
+
+.card-content>p {
+   font-weight: 400;
+   margin: .3rem 0;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+   text-overflow: ellipsis
+}
+
+.blog-author {
+   display: flex;
+   align-items: center;
+   width: auto;
+   padding: .25rem 1.25rem .25rem .25rem;
+   column-gap: .5rem;
+   border: 1px solid var(--primary-light);
+   background-color: var(--secondary-background);
+   border-radius: 2rem;
+   height: 3.5rem
+}
+
+.blog-author__name {
+   font-weight: 500
+}
+
+.blog-author__alias {
+   color: var(--background);
+   font-weight: 500
+}
+
+.blog-author img {
+   width: 3rem;
+   height: 3rem;
+   border-radius: 50%;
+   object-fit: cover
+}
+
+.blog-preview__bottom {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: .25rem;
+   margin-top: auto
+}
+
+.go-to-article-button {
+   padding: .5rem;
+   min-height: 2.25rem;
+   min-width: 3.5rem;
+   width: 100%;
+   max-width: 4.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: .5rem;
+   background-color: var(--primary-light);
+   transition: all .2s ease-in-out;
+   border: 1px solid transparent
+}
+
+.go-to-article-button svg {
+   width: 4rem;
+   stroke: var(--background)
+}
+
+.go-to-article-button:hover {
+   border: 1px solid var(--primary)
+}
+
+@container card-container (min-width:600px) {
+   .card {
+       flex-direction: row;
+       padding: 2rem;
+       gap: 2rem
+   }
+
+   .background {
+       flex: 3;
+       overflow: hidden
+   }
+
+   .content {
+       flex: 4;
+       padding: 0
+   }
+
+   .background img {
+       border-radius: .5rem
+   }
+
+   .card-content p {
+       -webkit-line-clamp: 6
+   }
+}
+
+.contact-btn-container {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   z-index: 1000
+}
+
+.contact-btn,.form-container {
+   transition: all .5s ease-in-out
+}
+
+.contact-btn {
+   background-color: var(--primary-light);
+   color: var(--background);
+   border: 0;
+   border-radius: 50%;
+   width: 60px;
+   height: 60px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   box-shadow: 0 2px 4px rgba(0,0,0,.2)
+}
+
+.form-container {
+   position: fixed;
+   bottom: 100px;
+   right: 20px;
+   display: none;
+   opacity: 0;
+   transform: scale(0);
+   z-index: 1000
+}
+
+.form-container.show {
+   display: block;
+   opacity: 1;
+   transform: scale(1)
+}
+
+.close-btn {
+   border: 0;
+   cursor: pointer;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background: 0 0;
+   color: #fff;
+   font-size: 20px
+}
+
+.contact-btn.show {
+   display: none
+}
+
+.portfolio-container {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   max-width: none;
+   margin: 0;
+   padding: 0
+}
+
+main section:first-child {
+   margin-top: 0
+}
+
+#hero,.skills-cloud {
+   display: flex;
+   justify-content: center
+}
+
+#hero {
+   flex-direction: column;
+   align-items: flex-start;
+   min-height: 100vh;
+   background: url(../assets/images/background_hero.webp)center/cover fixed no-repeat
+}
+
+#hero h1 {
+   font-size: clamp(32px,5vw,48px);
+   line-height: 1.2
+}
+
+#hero p {
+   font-size: clamp(18px,2vw,24px);
+   margin-bottom: 20px
+}
+
+#hero h1 span {
+   color: #4895d0
+}
+
+.skills-cloud {
+   flex-wrap: wrap;
+   gap: 10px
+}
+
+.skills-cloud span {
+   background-color: rgba(255,255,255,.1);
+   padding: 10px 20px;
+   border-radius: 20px;
+   font-size: clamp(14px,1.2vw,18px)
+}
+
+.projects-grid,.skills-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+   gap: 2rem;
+   width: 100%
+}
+
+button {
+   border-radius: 8px;
+   border: 1px solid #fff;
+   padding: .6em 1.2em;
+   font-size: 1em;
+   font-weight: 500;
+   font-family: inherit;
+   background-color: #1a1a1a;
+   transition: border-color .25s
+}
+
+form input,form textarea {
+   margin-bottom: 15px;
+   padding: 10px;
+   background-color: rgba(255,255,255,.1);
+   border: 0;
+   color: #fff
+}
+
+.skills-grid {
+   grid-template-columns: repeat(auto-fit,minmax(200px,1fr))
+}
+
+.card,.skill-card,button {
+   cursor: pointer
+}
+
+.card {
+   transition: all .3s ease
+}
+
+.project-details,.skill-details {
+   padding: 20px;
+   background-color: var(--secondary-background);
+   color: #fff
+}
+
+.card.open,.skill-card.open {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: 80%;
+   height: 80%;
+   max-width: 600px;
+   z-index: 1000;
+   overflow-y: auto;
+   animation: openCard .3s forwards
+}
+
+.card.open::before,.skill-card.open::before {
+   content: "";
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0,0,0,.7);
+   z-index: -1
+}
+
+.close-button {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   background: 0 0;
+   border: 0;
+   font-size: 24px;
+   cursor: pointer;
+   color: #fff
+}
+
+.skill-card {
+   border: 1px solid var(--secondary);
+   border-radius: .75rem;
+   background-color: var(--secondary-background);
+   overflow: hidden;
+   color: #fff;
+   transition: all .3s ease
+}
+
+.skill-card:hover {
+   border: 1px solid #4895d0;
+   box-shadow: 0 24px 72px 0 rgba(0,0,0,.3)
+}
+
+.skill-icon {
+   padding: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(255,255,255,.1)
+}
+
+.skill-icon img {
+   width: 80px;
+   height: 80px
+}
+
+.skill-content {
+   padding: 1rem;
+   text-align: center
+}
+
+.skill-content h3 {
+   margin: 0;
+   font-size: 1.2rem
+}
