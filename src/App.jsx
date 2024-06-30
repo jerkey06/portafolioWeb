@@ -28,7 +28,7 @@ function App() {
     { id: 9, title: "Java", imageUrl: "/assets/svg/Java.svg", description: "Lorem ipsum dolor sit amet..." },
     { id: 10, title: "PHP", imageUrl: "/assets/svg/PHP.svg", description: "Lorem ipsum dolor sit amet..." },
     { id: 11, title: "MySQL", imageUrl: "/assets/svg/MySQL.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 12, title: "Microsoft SQL Server", imageUrl: "/assets/svg/Microsoft SQL Server.svg", description: "Lorem ipsum dolor sit amet..." },
+    { id: 12, title: "Microsoft SQL", imageUrl: "/assets/svg/Microsoft SQL Server.svg", description: "Lorem ipsum dolor sit amet..." },
     { id: 13, title: "Linux", imageUrl: "/assets/svg/Linux.svg", description: "Lorem ipsum dolor sit amet..." },
     { id: 14, title: "Windows", imageUrl: "/assets/svg/Windows 8.svg", description: "Lorem ipsum dolor sit amet..." }
   ];
