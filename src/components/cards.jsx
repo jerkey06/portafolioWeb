@@ -49,7 +49,7 @@ const ProjectCard = ({
                 rel="author"
                 href={`mailto:${authorEmail}`}
                 className="blog-author__alias"
-              >
+              <a>
                 @{authorAlias}
               </a>
             </div>
