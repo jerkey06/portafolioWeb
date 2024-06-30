@@ -49,9 +49,9 @@ const ProjectCard = ({
                 rel="author"
                 href={`mailto:${authorEmail}`}
                 className="blog-author__alias"
-              <a>
+              
                 @{authorAlias}
-              </a>
+              
             </div>
           </div>
           <a className="go-to-article-button" href={projectLink} title="View Project">
