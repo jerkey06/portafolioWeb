@@ -1,20 +1,40 @@
 import React, { useState } from "react";
 
-const ProjectCard = ({title,description,imageUrl,authorName,authorEmail,authorAlias,profileImageUrl,}) => {
+const ProjectCard = ({
+  title,
+  description,
+  imageUrl,
+  authorName,
+  authorEmail,
+  authorAlias,
+  profileImageUrl,
+  cardType,
+  articleStatus,
+  projectLink,
+  onCardToggle,
+  isDisabled
+}) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    if (!isDisabled) {
+      setIsOpen(!isOpen);
+      onCardToggle(!isOpen);
+    }
+  };
 
   return (
     <article
-      className={`card ${isOpen ? "open" : ""}`}
-      onClick={() => setIsOpen(!isOpen)}
+      className={`card ${isOpen ? "open" : ""} ${isDisabled ? "disabled" : ""}`}
+      onClick={handleToggle}
     >
       <div className="background">
         <img src={imageUrl} alt={`${title} Preview`} />
       </div>
       <div className="content">
         <div className="card-header">
-          <div className="card-type">Web Dev</div>
-          <div className="latest-article">Latest Article</div>
+          <div className="card-type">{cardType}</div>
+          <div className="latest-article">{articleStatus}</div>
         </div>
         <div className="card-content">
           <h2>{title}</h2>
@@ -25,7 +45,7 @@ const ProjectCard = ({title,description,imageUrl,authorName,authorEmail,authorAl
             <img src={profileImageUrl} alt="Avatar" />
             <div className="blog-author__name">
               <div>{authorName}</div>
-              <a
+              
                 rel="author"
                 href={`mailto:${authorEmail}`}
                 className="blog-author__alias"
@@ -34,7 +54,7 @@ const ProjectCard = ({title,description,imageUrl,authorName,authorEmail,authorAl
               </a>
             </div>
           </div>
-          <a className="go-to-article-button" href="/my-blog" title="New Blog">
+          <a className="go-to-article-button" href={projectLink} title="View Project">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-arrow-narrow-right"

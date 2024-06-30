@@ -6,9 +6,14 @@ import SkillIcon from "./components/SkillIcon";
 
 function App() {
   const [openSkillId, setOpenSkillId] = useState(null);
+  const [openCardId, setOpenCardId] = useState(null);
 
   const handleSkillClick = (id) => {
     setOpenSkillId(prevId => (prevId === id ? null : id));
+  };
+
+  const handleCardToggle = (id, isOpen) => {
+    setOpenCardId(isOpen ? id : null);
   };
 
   const skills = [
@@ -26,6 +31,35 @@ function App() {
     { id: 12, title: "Microsoft SQL Server", imageUrl: "/assets/svg/Microsoft SQL Server.svg", description: "Lorem ipsum dolor sit amet..." },
     { id: 13, title: "Linux", imageUrl: "/assets/svg/Linux.svg", description: "Lorem ipsum dolor sit amet..." },
     { id: 14, title: "Windows", imageUrl: "/assets/svg/Windows 8.svg", description: "Lorem ipsum dolor sit amet..." }
+  ];
+
+  const projects = [
+    {
+      id: 1,
+      title: "Proyecto Prueba 1",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae molestiae nulla asperiores eligendi cupiditate, fuga eos expedita excepturi, numquam cum autem similique ad porro error! Sit sint vel illo similique.",
+      imageUrl: "/assets/images/preview.png",
+      authorName: "Emiliano",
+      authorEmail: "ponceemiliano44@gmail.com",
+      authorAlias: "jerkey",
+      profileImageUrl: "/assets/images/profile_small.png",
+      cardType: "Web Dev",
+      articleStatus: "Latest Article",
+      projectLink: "/project1"
+    },
+    {
+      id: 2,
+      title: "Proyecto Prueba 2",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!",
+      imageUrl: "/assets/images/preview.png",
+      authorName: "Emiliano",
+      authorEmail: "ponceemiliano44@gmail.com",
+      authorAlias: "jerkey",
+      profileImageUrl: "/assets/images/profile_small.png",
+      cardType: "Mobile App",
+      articleStatus: "Featured",
+      projectLink: "/project2"
+    },
   ];
 
   return (
@@ -63,48 +97,20 @@ function App() {
         <section id="projects">
           <h2>Proyectos</h2>
           <div className="projects-grid">
-            <ProjectCard
-              title="Proyecto Prueba 1"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae molestiae nulla asperiores eligendi cupiditate, fuga eos expedita excepturi, numquam cum autem similique ad porro error! Sit sint vel illo similique."
-              imageUrl="/assets/images/preview.png"
-              authorName="Emiliano"
-              authorEmail="ponceemiliano44@gmail.com"
-              authorAlias="jerkey"
-              profileImageUrl="/assets/images/profile_small.png"
-            />
-            <ProjectCard
-              title="Proyecto Prueba 2"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!"
-              imageUrl="/assets/images/preview.png"
-              authorName="Emiliano"
-              authorEmail="ponceemiliano44@gmail.com"
-              authorAlias="jerkey"
-              profileImageUrl="/assets/images/profile_small.png"
-            />
-            <ProjectCard
-              title="Proyecto Prueba 3"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!"
-              imageUrl="/assets/images/preview.png"
-              authorName="Emiliano"
-              authorEmail="ponceemiliano44@gmail.com"
-              authorAlias="jerkey"
-              profileImageUrl="/assets/images/profile_small.png"
-            />
-            <ProjectCard
-              title="Proyecto Prueba 4"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!"
-              imageUrl="/assets/images/preview.png"
-              authorName="Emiliano"
-              authorEmail="ponceemiliano44@gmail.com"
-              authorAlias="jerkey"
-              profileImageUrl="/assets/images/profile_small.png"
-            />
+            {projects.map(project => (
+              <ProjectCard
+                key={project.id}
+                {...project}
+                onCardToggle={(isOpen) => handleCardToggle(project.id, isOpen)}
+                isDisabled={openCardId !== null && openCardId !== project.id}
+              />
+            ))}
           </div>
         </section>
 
         <section id="contact">
           <h2>Contacto</h2>
-
+          {/* Add your contact form or information here */}
         </section>
       </main>
       <Footer />
