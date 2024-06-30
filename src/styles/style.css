@@ -197,8 +197,8 @@ footer {
    color: #fff;
    text-align: center;
    height: 100px; /* Set a fixed height for the footer */
- }
-
+   margin-bottom: 0; /* Ensure no margin at the bottom */
+}
 :root {
    --background: #ffffff;
    --primary: #000;
