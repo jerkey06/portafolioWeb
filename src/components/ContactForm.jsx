@@ -23,7 +23,7 @@ const ContactForm = () => {
       <h2>Contacto</h2>
       <div className="contact-container">
         <div className="contact-info">
-          <h3>DON'T BE SHY!</h3>
+          <h3>NO DUDES EN CONTACTARME!</h3>
           <p>No dudes en ponerte en contacto conmigo. Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones.</p>
           <div className="contact-details">
             <div className="contact-item">
