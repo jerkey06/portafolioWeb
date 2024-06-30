@@ -3,6 +3,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import ProjectCard from "./components/cards";
 import SkillIcon from "./components/SkillIcon";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   const [openSkillId, setOpenSkillId] = useState(null);
@@ -60,32 +61,32 @@ function App() {
       articleStatus: "Featured",
       projectLink: "/project2"
     },
-   {
-    id: 3,
-    title: "Proyecto Prueba 3",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!",
-    imageUrl: "/assets/images/preview.png",
-    authorName: "Emiliano",
-    authorEmail: "ponceemiliano44@gmail.com",
-    authorAlias: "jerkey",
-    profileImageUrl: "/assets/images/profile_small.png",
-    cardType: "Mobile App",
-    articleStatus: "Featured",
-    projectLink: "/project3"
-  },
-  {
-    id: 4,
-    title: "Proyecto Prueba 4",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!",
-    imageUrl: "/assets/images/preview.png",
-    authorName: "Emiliano",
-    authorEmail: "ponceemiliano44@gmail.com",
-    authorAlias: "jerkey",
-    profileImageUrl: "/assets/images/profile_small.png",
-    cardType: "Mobile App",
-    articleStatus: "Featured",
-    projectLink: "/project4"
-  },
+    {
+      id: 3,
+      title: "Proyecto Prueba 3",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!",
+      imageUrl: "/assets/images/preview.png",
+      authorName: "Emiliano",
+      authorEmail: "ponceemiliano44@gmail.com",
+      authorAlias: "jerkey",
+      profileImageUrl: "/assets/images/profile_small.png",
+      cardType: "Mobile App",
+      articleStatus: "Featured",
+      projectLink: "/project3"
+    },
+    {
+      id: 4,
+      title: "Proyecto Prueba 4",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!",
+      imageUrl: "/assets/images/preview.png",
+      authorName: "Emiliano",
+      authorEmail: "ponceemiliano44@gmail.com",
+      authorAlias: "jerkey",
+      profileImageUrl: "/assets/images/profile_small.png",
+      cardType: "Mobile App",
+      articleStatus: "Featured",
+      projectLink: "/project4"
+    },
   ];
 
   return (
@@ -134,10 +135,7 @@ function App() {
           </div>
         </section>
 
-        <section id="contact">
-          <h2>Contacto</h2>
-          {/* Add your contact form or information here */}
-        </section>
+        <ContactForm />
       </main>
       <Footer />
     </div>
