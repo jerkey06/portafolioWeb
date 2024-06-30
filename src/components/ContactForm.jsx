@@ -24,11 +24,11 @@ const ContactForm = () => {
       <div className="contact-container">
         <div className="contact-info">
           <h3>DON'T BE SHY!</h3>
-          <p>Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
+          <p>No dudes en ponerte en contacto conmigo. Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades para ser parte de tus visiones.</p>
           <div className="contact-details">
             <div className="contact-item">
               <img src="/assets/svg/map-pin.svg" alt="Address" />
-              <p>123 Street New York City, United States Of America 750065.</p>
+              <p>C. Valle Azul 101, INFONAVIT del Valle, 36322 San Francisco.</p>
             </div>
             <div className="contact-item">
               <img src="/assets/svg/mail.svg" alt="Email" />
@@ -36,7 +36,7 @@ const ContactForm = () => {
             </div>
             <div className="contact-item">
               <img src="/assets/svg/phone.svg" alt="Phone" />
-              <p>+216 21 184 010</p>
+              <p>+476 101 2128</p>
             </div>
           </div>
           <div className="social-links">
@@ -50,7 +50,7 @@ const ContactForm = () => {
           <input
             type="text"
             name="name"
-            placeholder="YOUR NAME"
+            placeholder="Nombre"
             onChange={handleChange}
             value={formData.name}
             required
@@ -58,7 +58,7 @@ const ContactForm = () => {
           <input
             type="email"
             name="email"
-            placeholder="YOUR EMAIL"
+            placeholder="Correo"
             onChange={handleChange}
             value={formData.email}
             required
@@ -66,14 +66,14 @@ const ContactForm = () => {
           <input
             type="text"
             name="subject"
-            placeholder="YOUR SUBJECT"
+            placeholder="Asunto"
             onChange={handleChange}
             value={formData.subject}
             required
           />
           <textarea
             name="message"
-            placeholder="YOUR MESSAGE"
+            placeholder="Mensaje"
             onChange={handleChange}
             value={formData.message}
             required
