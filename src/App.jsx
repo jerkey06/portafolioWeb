@@ -66,38 +66,38 @@ function App() {
             <ProjectCard
               title="Proyecto Prueba 1"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae molestiae nulla asperiores eligendi cupiditate, fuga eos expedita excepturi, numquam cum autem similique ad porro error! Sit sint vel illo similique."
-              imageUrl="/src/assets/images/preview.png"
+              imageUrl="/assets/images/preview.png"
               authorName="Emiliano Ponce"
               authorEmail="ponceemiliano44@gmail.com"
               authorAlias="jerkey"
-              profileImageUrl="/src/assets/images/profile_small.png"
+              profileImageUrl="/assets/images/profile_small.png"
             />
             <ProjectCard
               title="Proyecto Prueba 2"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!"
-              imageUrl="/src/assets/images/preview.png"
+              imageUrl="/assets/images/preview.png"
               authorName="Emiliano Ponce"
               authorEmail="ponceemiliano44@gmail.com"
               authorAlias="jerkey"
-              profileImageUrl="/src/assets/images/profile_small.png"
+              profileImageUrl="/assets/images/profile_small.png"
             />
             <ProjectCard
               title="Proyecto Prueba 3"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!"
-              imageUrl="/src/assets/images/preview.png"
+              imageUrl="/assets/images/preview.png"
               authorName="Emiliano Ponce"
               authorEmail="ponceemiliano44@gmail.com"
               authorAlias="jerkey"
-              profileImageUrl="/src/assets/images/profile_small.png"
+              profileImageUrl="/assets/images/profile_small.png"
             />
             <ProjectCard
               title="Proyecto Prueba 4"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iure quos sint maxime pariatur delectus similique quibusdam magni earum, magnam eveniet officia recusandae beatae temporibus tempora eius explicabo porro hic!"
-              imageUrl="/src/assets/images/preview.png"
+              imageUrl="/assets/images/preview.png"
               authorName="Emiliano Ponce"
               authorEmail="ponceemiliano44@gmail.com"
               authorAlias="jerkey"
-              profileImageUrl="/src/assets/images/profile_small.png"
+              profileImageUrl="/assets/images/profile_small.png"
             />
           </div>
         </section>
