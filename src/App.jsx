@@ -12,7 +12,7 @@ function App() {
   };
 
   const skills = [
-    { id: 1, title: "HTML", imageUrl: "/src/assets/svg/HTML5.svg", description: "Lorem ipsum dolor sit amet..." },
+    { id: 1, title: "HTML", imageUrl: "/assets/svg/HTML5.svg", description: "Lorem ipsum dolor sit amet..." },
     { id: 2, title: "CSS", imageUrl: "/src/assets/svg/CSS3.svg", description: "Lorem ipsum dolor sit amet..." },
     { id: 3, title: "JavaScript", imageUrl: "/src/assets/svg/JavaScript.svg", description: "Lorem ipsum dolor sit amet..." },
     { id: 4, title: "React", imageUrl: "/src/assets/svg/React.svg", description: "Lorem ipsum dolor sit amet..." },
