@@ -42,7 +42,7 @@ const ContactForm = () => {
           <div className="social-links">
             <a href="#" aria-label="Facebook"><img src="/assets/svg/facebook.svg" alt="Facebook" /></a>
             <a href="#" aria-label="Twitter"><img src="/assets/svg/twitter.svg" alt="Twitter" /></a>
-            <a href="#" aria-label="GitHub"><img src="/assets/svg/github.svg" alt="GitHub" /></a>
+            <a href="#" aria-label="GitHub"><img src="/assets/svg/1github.svg" alt="GitHub" /></a>
             <a href="#" aria-label="LinkedIn"><img src="/assets/svg/linkedin.svg" alt="LinkedIn" /></a>
           </div>
         </div>
