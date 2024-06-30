@@ -195,8 +195,9 @@ footer {
    padding: 20px 5%;
    background-color: rgba(0,0,0,.7);
    color: #fff;
-   text-align: center
-}
+   text-align: center;
+   height: 100px; /* Set a fixed height for the footer */
+ }
 
 :root {
    --background: #ffffff;
@@ -612,8 +613,12 @@ form input,form textarea {
    font-size: 1.2rem
 }
 #contact {
-   background-color: var(--secondary-background);
+   background-color: rgba(0,0,0,.7);
    padding: 4rem 0;
+   min-height: calc(100vh - 100px); /* Subtract footer height */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
  }
  
  #contact h2 {
@@ -629,8 +634,8 @@ form input,form textarea {
    max-width: 1200px;
    margin: 0 auto;
    padding: 0 2rem;
+   flex: 1;
  }
- 
  .contact-info, .contact-form {
    flex-basis: 48%;
  }
