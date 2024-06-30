@@ -348,9 +348,9 @@ footer {
    align-items: center;
    justify-content: center;
    border-radius: .5rem;
-   background-color: var(--primary-light);
+   background-color: var(--secondary-background);
    transition: all .2s ease-in-out;
-   border: 1px solid transparent
+   border: 1px solid #ffffff;
 }
 
 .go-to-article-button svg {
@@ -359,7 +359,7 @@ footer {
 }
 
 .go-to-article-button:hover {
-   border: 1px solid var(--primary)
+   border: 1px solid var(--secondary-text)
 }
 
 @container card-container (min-width:600px) {
