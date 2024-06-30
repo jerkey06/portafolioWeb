@@ -20,7 +20,7 @@ const ContactForm = () => {
 
   return (
     <section id="contact">
-      <h2>GET IN TOUCH</h2>
+      <h2>Contacto</h2>
       <div className="contact-container">
         <div className="contact-info">
           <h3>DON'T BE SHY!</h3>
