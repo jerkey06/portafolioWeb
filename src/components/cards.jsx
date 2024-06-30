@@ -45,11 +45,11 @@ const ProjectCard = ({
             <img src={profileImageUrl} alt="Avatar" />
             <div className="blog-author__name">
               <div>{authorName}</div>
-              <a>
+              <a
                 rel="author"
                 href={`mailto:${authorEmail}`}
                 className="blog-author__alias"
-
+              >
                 @{authorAlias}
               </a>
             </div>
