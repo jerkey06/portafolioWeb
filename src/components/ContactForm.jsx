@@ -79,7 +79,7 @@ const ContactForm = () => {
             required
           ></textarea>
           <button type="submit" className="send-message-btn">
-            SEND MESSAGE
+            ENVIAR
             <img src="/assets/svg/send.svg" alt="Send" className="send-icon" />
           </button>
         </form>
