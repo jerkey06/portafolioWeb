@@ -622,6 +622,40 @@ form input,form textarea {
    font-size: 2.5rem;
    margin-bottom: 2rem;
  }
+ @media (max-width: 767px) {
+   .skills-grid {
+     grid-template-columns: 1fr;
+     gap: 1rem;
+   }
+ 
+   .skill-card {
+     display: flex;
+     align-items: center;
+     padding: 0.5rem;
+     border-radius: 0.5rem;
+   }
+ 
+   .skill-icon {
+     padding: 0.5rem;
+     background-color: transparent;
+   }
+ 
+   .skill-icon img {
+     width: 40px;
+     height: 40px;
+   }
+ 
+   .skill-content {
+     flex-grow: 1;
+     text-align: left;
+     padding: 0 0.5rem;
+   }
+ 
+   .skill-content h3 {
+     margin: 0;
+     font-size: 1rem;
+   }
+ }
 #projects h3 {
    text-align: center;
    color: #fff;
