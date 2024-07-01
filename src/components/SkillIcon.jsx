@@ -1,6 +1,6 @@
 import React from "react";
 
-const SkillIcon = ({ id, title, imageUrl, experience, description, isOpen, onClick }) => {
+const SkillIcon = ({ id, title, imageUrl, experience, description,description2, isOpen, onClick }) => {
   return (
     <div className={`skill-card ${isOpen ? "open" : ""}`} onClick={() => onClick(id)}>
       <div className="skill-icon">
@@ -13,6 +13,8 @@ const SkillIcon = ({ id, title, imageUrl, experience, description, isOpen, onCli
         <div className="skill-details">
           <p><strong>Experience:</strong> {experience}</p>
           <p>{description}</p>
+          <br />
+          <p>{description2}</p>
         </div>
       )}
     </div>
