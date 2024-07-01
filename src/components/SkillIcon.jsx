@@ -11,7 +11,7 @@ const SkillIcon = ({ id, title, imageUrl, experience, description,description2, 
       </div>
       {isOpen && (
         <div className="skill-details">
-          <p><strong>Experience:</strong> {experience}</p>
+          <p><strong>experiencia:</strong> {experience}</p>
           <br />
           <p>{description}</p>
           <br />
