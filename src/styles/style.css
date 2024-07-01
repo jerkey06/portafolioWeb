@@ -682,6 +682,11 @@ form input,form textarea {
    font-size: 2.5rem;
    margin-bottom: 2rem;
  }
+ #proyects h4 {
+   text-align: center;
+   color: #fff;
+
+ }
 #contact {
    background-color: rgba(0,0,0,.7);
    min-height: calc(100vh - 100px); /* Subtract footer height */
@@ -809,5 +814,114 @@ form input,form textarea {
    .contact-info, .contact-form {
      flex-basis: 100%;
      margin-bottom: 2rem;
+   }
+ }
+ .project-card {
+   background-color: var(--secondary-background);
+   border-radius: 0.75rem;
+   overflow: hidden;
+   transition: all 0.3s ease;
+   cursor: pointer;
+ }
+ 
+ .project-card-content {
+   padding: 1rem;
+ }
+ 
+ .project-card-header {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 1rem;
+ }
+ 
+ .project-card-type,
+ .project-card-status {
+   padding: 0.25rem 0.75rem;
+   border-radius: 0.5rem;
+   font-size: 0.875rem;
+ }
+ 
+ .project-title {
+   font-size: 1.5rem;
+   color: #fff;
+   margin-bottom: 1rem;
+ }
+ 
+ .project-image img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+   border-radius: 0.5rem;
+ }
+ 
+ .project-description {
+   color: #fff;
+   margin: 1rem 0;
+   font-size: 1rem;
+ }
+ 
+ .project-card-footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 1rem;
+ }
+ 
+ .project-author {
+   display: flex;
+   align-items: center;
+ }
+ 
+ .author-avatar {
+   width: 2.5rem;
+   height: 2.5rem;
+   border-radius: 50%;
+   margin-right: 0.5rem;
+ }
+ 
+ .author-info {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .author-name {
+   font-weight: 500;
+ }
+ 
+ .author-alias {
+   color: var(--secondary-text);
+   text-decoration: none;
+ }
+ 
+ .project-link {
+   padding: 0.5rem;
+   border-radius: 0.5rem;
+   background-color: var(--secondary-background);
+   transition: all 0.2s ease-in-out;
+ }
+ 
+ .project-link:hover {
+   background-color: var(--secondary-text);
+ }
+ 
+ .project-details {
+   margin-top: 1rem;
+   padding-top: 1rem;
+   border-top: 1px solid var(--secondary);
+ }
+ 
+ .project-details h4 {
+   font-size: 1.25rem;
+   margin-bottom: 0.5rem;
+ }
+ 
+ @media (max-width: 767px) {
+   .project-title {
+     font-size: 1.25rem;
+   }
+ 
+   .project-description,
+   .project-details p {
+     font-size: 0.9rem;
    }
  }

@@ -25,36 +25,34 @@ const ProjectCard = ({
 
   return (
     <article
-      className={`card ${isOpen ? "open" : ""} ${isDisabled ? "disabled" : ""}`}
+      className={`project-card ${isOpen ? "open" : ""} ${isDisabled ? "disabled" : ""}`}
       onClick={handleToggle}
     >
-      <div className="background">
-        <img src={imageUrl} alt={`${title} Preview`} />
-      </div>
-      <div className="content">
-        <div className="card-header">
-          <div className="card-type">{cardType}</div>
-          <div className="latest-article">{articleStatus}</div>
+      <div className="project-card-content">
+        <div className="project-card-header">
+          <div className="project-card-type">{cardType}</div>
+          <div className="project-card-status">{articleStatus}</div>
         </div>
-        <div className="card-content">
-          <h2>{title}</h2>
-          <p>{description}</p>
+        <h3 className="project-title">{title}</h3>
+        <div className="project-image">
+          <img src={imageUrl} alt={`${title} Preview`} />
         </div>
-        <div className="blog-preview__bottom">
-          <div className="blog-author">
-            <img src={profileImageUrl} alt="Avatar" />
-            <div className="blog-author__name">
-              <div>{authorName}</div>
+        <p className="project-description">{description}</p>
+        <div className="project-card-footer">
+          <div className="project-author">
+            <img src={profileImageUrl} alt={`Avatar de ${authorName}`} className="author-avatar" />
+            <div className="author-info">
+              <div className="author-name">{authorName}</div>
               <a
                 rel="author"
                 href={`mailto:${authorEmail}`}
-                className="blog-author__alias"
+                className="author-alias"
               >
                 @{authorAlias}
               </a>
             </div>
           </div>
-          <a className="go-to-article-button" href={projectLink} title="View Project">
+          <a className="project-link" href={projectLink} title="Ver Proyecto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-arrow-narrow-right"
@@ -76,7 +74,7 @@ const ProjectCard = ({
         </div>
         {isOpen && (
           <div className="project-details">
-            <h3>Detalles del Proyecto</h3>
+            <h4>Detalles del Proyecto</h4>
             <p>{description}</p>
           </div>
         )}

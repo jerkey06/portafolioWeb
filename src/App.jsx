@@ -121,9 +121,9 @@ function App() {
           </div>
         </section>
 
-        <section id="projects">
-          <h3>Proyectos</h3>
-          <div className="projects-grid">
+        <section id="projects" className="section-projects">
+        <h2 className="section-title">Proyectos</h2>
+        <div className="projects-grid">
             {projects.map(project => (
               <ProjectCard
                 key={project.id}
