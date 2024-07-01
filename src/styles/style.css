@@ -47,9 +47,7 @@ main section {
    margin-bottom: 0;
 }
 main section:last-of-type {
-   /* Ensure the last section doesn't have extra space at the bottom */
    padding-bottom: 0;
-   /* This will push the content to fill available space, pushing the footer down */
    flex-grow: 1;
 }
 
