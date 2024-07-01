@@ -616,18 +616,6 @@ form input,form textarea {
    margin: 0;
    font-size: 1.2rem
 }
-#skills h2 {
-   text-align: center;
-   color: #fff;
-   font-size: 2.5rem;
-   margin-bottom: 2rem;
- }
-#projects h2 {
-   text-align: center;
-   color: #fff;
-   font-size: 2.5rem;
-   margin-bottom: 2rem;
- }
 #contact {
    background-color: rgba(0,0,0,.7);
    min-height: calc(100vh - 100px); /* Subtract footer height */
@@ -756,4 +744,16 @@ form input,form textarea {
      flex-basis: 100%;
      margin-bottom: 2rem;
    }
+ }
+ #skills h2 {
+   text-align: center;
+   color: #fff;
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+ }
+#projects h2 {
+   text-align: center;
+   color: #fff;
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
  }
