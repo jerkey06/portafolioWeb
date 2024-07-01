@@ -741,7 +741,6 @@ form input,form textarea {
    .contact-container {
      flex-direction: column;
    }
- 
    .contact-info, .contact-form {
      flex-basis: 100%;
      margin-bottom: 2rem;
