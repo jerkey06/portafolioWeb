@@ -621,6 +621,8 @@ form input,form textarea {
    color: #fff;
    font-size: 2.5rem;
    margin-bottom: 2rem;
+   border-radius: 5.75rem;
+   background-color: var(--secondary-background);
  }
  @media (max-width: 767px) {
    .skills-grid {
