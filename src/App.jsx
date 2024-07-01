@@ -122,7 +122,7 @@ function App() {
         </section>
 
         <section id="projects">
-          <h2>Proyectos</h2>
+          <h3>Proyectos</h3>
           <div className="projects-grid">
             {projects.map(project => (
               <ProjectCard
