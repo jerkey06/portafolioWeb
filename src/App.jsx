@@ -17,21 +17,22 @@ function App() {
     setOpenCardId(isOpen ? id : null);
   };
 
+
   const skills = [
-    { id: 1, title: "HTML", imageUrl: "/assets/svg/HTML5.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 2, title: "CSS", imageUrl: "/assets/svg/CSS3.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 3, title: "JavaScript", imageUrl: "/assets/svg/JavaScript.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 4, title: "React", imageUrl: "/assets/svg/React.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 5, title: "Node.js", imageUrl: "/assets/svg/Node.js.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 6, title: "Git", imageUrl: "/assets/svg/Git.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 7, title: "GitHub", imageUrl: "/assets/svg/GitHub.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 8, title: "Python", imageUrl: "/assets/svg/Python.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 9, title: "Java", imageUrl: "/assets/svg/Java.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 10, title: "PHP", imageUrl: "/assets/svg/PHP.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 11, title: "MySQL", imageUrl: "/assets/svg/MySQL.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 12, title: "Microsoft SQL", imageUrl: "/assets/svg/Microsoft SQL Server.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 13, title: "Linux", imageUrl: "/assets/svg/Linux.svg", description: "Lorem ipsum dolor sit amet..." },
-    { id: 14, title: "Windows", imageUrl: "/assets/svg/Windows 8.svg", description: "Lorem ipsum dolor sit amet..." }
+    { id: 1, title: "HTML", imageUrl: "/assets/svg/HTML5.svg", experience: "5 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 2, title: "CSS", imageUrl: "/assets/svg/CSS3.svg", experience: "4 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 3, title: "JavaScript", imageUrl: "/assets/svg/JavaScript.svg", experience: "3 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 4, title: "React", imageUrl: "/assets/svg/React.svg", experience: "2 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 5, title: "Node.js", imageUrl: "/assets/svg/Node.js.svg", experience: "2 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 6, title: "Git", imageUrl: "/assets/svg/Git.svg", experience: "3 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 7, title: "GitHub", imageUrl: "/assets/svg/GitHub.svg", experience: "3 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 8, title: "Python", imageUrl: "/assets/svg/Python.svg", experience: "1 year", description: "Lorem ipsum dolor sit amet..." },
+    { id: 9, title: "Java", imageUrl: "/assets/svg/Java.svg", experience: "2 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 10, title: "PHP", imageUrl: "/assets/svg/PHP.svg", experience: "1 year", description: "Lorem ipsum dolor sit amet..." },
+    { id: 11, title: "MySQL", imageUrl: "/assets/svg/MySQL.svg", experience: "2 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 12, title: "Microsoft SQL", imageUrl: "/assets/svg/Microsoft SQL Server.svg", experience: "1 year", description: "Lorem ipsum dolor sit amet..." },
+    { id: 13, title: "Linux", imageUrl: "/assets/svg/Linux.svg", experience: "2 years", description: "Lorem ipsum dolor sit amet..." },
+    { id: 14, title: "Windows", imageUrl: "/assets/svg/Windows 8.svg", experience: "5 years", description: "Lorem ipsum dolor sit amet..." }
   ];
 
   const projects = [
@@ -105,21 +106,22 @@ function App() {
         </section>
 
         <section id="skills">
-          <h2>Habilidades y herramientas</h2>
-          <div className="skills-grid">
-            {skills.map(skill => (
-              <SkillIcon
-                key={skill.id}
-                id={skill.id}
-                title={skill.title}
-                imageUrl={skill.imageUrl}
-                description={skill.description}
-                isOpen={skill.id === openSkillId}
-                onClick={handleSkillClick}
-              />
-            ))}
-          </div>
-        </section>
+        <h2>Habilidades y herramientas</h2>
+        <div className="skills-grid">
+          {skills.map(skill => (
+            <SkillIcon
+              key={skill.id}
+              id={skill.id}
+              title={skill.title}
+              imageUrl={skill.imageUrl}
+              experience={skill.experience}
+              description={skill.description}
+              isOpen={skill.id === openSkillId}
+              onClick={handleSkillClick}
+            />
+          ))}
+        </div>
+      </section>
 
         <section id="projects">
           <h3>Proyectos</h3>
