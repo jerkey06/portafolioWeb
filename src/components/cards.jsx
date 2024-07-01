@@ -76,7 +76,6 @@ const ProjectCard = ({
         </div>
         {isOpen && (
           <div className="project-details">
-            <h3>Detalles del Proyecto</h3>
             <p>{description}</p>
           </div>
         )}
