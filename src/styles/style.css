@@ -43,9 +43,15 @@ main section {
    justify-content: center;
    box-sizing: border-box;
    margin-top: 100px;
-   margin-bottom: 100px;
-   padding: 40px
+   padding: 40px;
+   margin-bottom: 0;
+main section:last-of-type {
+   /* Ensure the last section doesn't have extra space at the bottom */
+   padding-bottom: 0;
+   /* This will push the content to fill available space, pushing the footer down */
+   flex-grow: 1;
 }
+
 
 form,header {
    background-color: rgba(0,0,0,.7)
@@ -197,7 +203,6 @@ footer {
    color: #fff;
    text-align: center;
    height: 100px; /* Set a fixed height for the footer */
-   margin-bottom: 0; /* Ensure no margin at the bottom */
 }
 :root {
    --background: #ffffff;
@@ -614,11 +619,11 @@ form input,form textarea {
 }
 #contact {
    background-color: rgba(0,0,0,.7);
-   padding: 4rem 0;
    min-height: calc(100vh - 100px); /* Subtract footer height */
    display: flex;
    flex-direction: column;
    justify-content: center;
+   justify-content: flex-start;
  }
  
  #contact h2 {
