@@ -47,7 +47,8 @@ function App() {
       profileImageUrl: "/assets/images/profile_small.png",
       cardType: "Web Dev",
       articleStatus: "Terminado",
-      projectLink: "https://epgweather-time.netlify.app/"
+      projectLink: "https://epgweather-time.netlify.app/",
+      tecnogies: ["/assets/svg/React.svg", "/assets/svg/vite.svg", "/assets/svg/tailwind-css.svg"]
     },
     {
       id: 2,

@@ -12,7 +12,8 @@ const ProjectCard = ({
   articleStatus,
   projectLink,
   onCardToggle,
-  isDisabled
+  isDisabled,
+  technologies // Nuevo parámetro para las tecnologías utilizadas
 }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -38,6 +39,16 @@ const ProjectCard = ({
         </div>
         <div className="card-content">
           <h2>{title}</h2>
+          <div className="technologies">
+            {technologies.map((technology, index) => (
+              <img
+                key={index}
+                src={technology}
+                alt={`${technology} Logo`}
+                className="technology-logo"
+              />
+            ))}
+          </div>
         </div>
         <div className="blog-preview__bottom">
           <div className="blog-author">
