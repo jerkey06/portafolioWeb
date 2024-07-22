@@ -38,7 +38,6 @@ const ProjectCard = ({
         </div>
         <div className="card-content">
           <h2>{title}</h2>
-          <p>{description}</p>
         </div>
         <div className="blog-preview__bottom">
           <div className="blog-author">
@@ -76,6 +75,7 @@ const ProjectCard = ({
         </div>
         {isOpen && (
           <div className="project-details">
+            <p>{description}</p>
           </div>
         )}
       </div>
