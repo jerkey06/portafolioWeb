@@ -38,16 +38,16 @@ function App() {
   const projects = [
     {
       id: 1,
-      title: "Proyecto Prueba 1",
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae molestiae nulla asperiores eligendi cupiditate, fuga eos expedita excepturi, numquam cum autem similique ad porro error! Sit sint vel illo similique.",
-      imageUrl: "/assets/images/preview.png",
+      title: "Aplicacion del clima",
+      description: "Esta es una aplicacion del climas que te permite ver el clima de cualquier ciudad del mundo. Esta aplicacion fue creada con React y la API de OpenWeatherMap. Puedes buscar el clima de cualquier ciudad y ver la temperatura actual, la temperatura maxima y minima, la humedad y la velocidad del viento. Ademas, tiene un mapa interactivo que muestra la ubicacion de la ciudad seleccionada.",
+      imageUrl: "/assets/images/captura.png",
       authorName: "Emiliano",
       authorEmail: "ponceemiliano44@gmail.com",
       authorAlias: "jerkey",
       profileImageUrl: "/assets/images/profile_small.png",
       cardType: "Web Dev",
-      articleStatus: "Latest Article",
-      projectLink: "/project1"
+      articleStatus: "Terminado",
+      projectLink: "https://epgweather-time.netlify.app/"
     },
     {
       id: 2,
